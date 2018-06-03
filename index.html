@@ -12,24 +12,26 @@
 </head>
 
 <body>
-    <!-- oldalcím -->
-    <h1>Kereső</h1>
 
     <!-- alkalmazás -->
-    <main id="app">
+    <main id="app" class="container">
+
+        <!-- oldalcím -->
+        <h1>Kereső</h1>
+
         <!-- filterek -->
         <div id="filters">
             <input type="text" id="nameFilter" v-model="nameFilter" placeholder="Kereső">
         </div>
 
         <!-- találatok -->
-        <ol id="resultList">
-            <li v-for='resultItem in GetResults()'>
-                <span>
+        <div class="row">
+            <div class="col-3" v-for='resultItem in GetResults()'>
+                <div>
                     {{ resultItem }}
-                </span>                    
-            </li>
-        </ol>
+                </div>
+            </div>
+        </div>
     </main>
 
     <!-- vendor JS -->
