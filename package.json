@@ -4,10 +4,11 @@
     "description": "",
     "main": "scripts.js",
     "scripts": {
-        "preinstall": "npm install -g opener",
+        "preinstall": "npm install -g opener -g node-sass",
         "open": "opener http://localhost:8080",
-        "serve": "http-server -a localhost",
-        "dev": "concurrently \"npm run serve\" \"npm run open\""
+        "serve": "http-server -a localhost -s",
+        "scss": "node-sass --output-style compressed -o dist src/scss -w",
+        "dev": "concurrently \"npm run scss\" \"npm run serve\" \"npm run open\""
     },
     "author": "",
     "license": "ISC",

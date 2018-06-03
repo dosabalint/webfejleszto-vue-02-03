@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Kereső</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="dist/main.css">
 </head>
 
 <body>
@@ -16,13 +19,15 @@
     <main id="app">
         <!-- filterek -->
         <div id="filters">
-            <input type="text" id="nameFilter" v-model="nameFilter">
+            <input type="text" id="nameFilter" v-model="nameFilter" placeholder="Kereső">
         </div>
 
         <!-- találatok -->
         <ol id="resultList">
             <li v-for='resultItem in GetResults()'>
-                {{ resultItem }}
+                <span>
+                    {{ resultItem }}
+                </span>                    
             </li>
         </ol>
     </main>
