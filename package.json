@@ -4,7 +4,6 @@
     "description": "",
     "main": "scripts.js",
     "scripts": {
-        "preinstall": "npm install -g opener -g node-sass",
         "open": "opener http://localhost:8080",
         "serve": "http-server -a localhost -s",
         "scss": "node-sass --output-style compressed -o dist src/scss -w",
@@ -18,6 +17,8 @@
     },
     "devDependencies": {
         "concurrently": "^3.5.1",
-        "http-server": "^0.11.1"
+        "http-server": "^0.11.1",
+        "node-sass": "^4.9.0",
+        "opener": "^1.4.3"
     }
 }
